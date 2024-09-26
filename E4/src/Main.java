@@ -4,8 +4,7 @@ interface Filtre {
     boolean filtrar(Estudiante estudiante);
 }
 
-record Estudiante(String nombre, int nota) {
-}
+record Estudiante(String nombre, int nota) {}
 
 
 class MostradorEstudiante {
@@ -35,7 +34,7 @@ public class Main {
         mostradordeAlumnos.Mostrar(listaestudiantes, estudiante1 -> estudiante1.nota() >= 5);
         mostradordeAlumnos.Mostrar(listaestudiantes, estudiante1 -> estudiante1.nombre().contains("c"));
         mostradordeAlumnos.Mostrar(listaestudiantes, estudiante1 -> estudiante1.nombre().length() < 5);
-        System.out.println(listaestudiantes);
+        mostradordeAlumnos.Mostrar(listaestudiantes, estudiante1 -> true);
 
 
     }
